@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.create(title: params[:title], description: params[:description])
+    session[:form_params] = params.inspect
   end
   
 end
