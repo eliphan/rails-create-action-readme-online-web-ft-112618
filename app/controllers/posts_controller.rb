@@ -15,7 +15,6 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.create(title: params[:title], description: params[:description])
-    @post.save
   end
   
 end
